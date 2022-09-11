@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.sigmaclientwastaken.client.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+  ],
+  "client": [
+    "MixinClientPlayerEntity",
+    "MixinInGameHud",
+    "MixinKeyboard"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
