@@ -41,6 +41,8 @@ public class BindCommand extends Command {
         if(module == null) {
             CommandHandler.message(Formatting.RED + "Module not found.");
         } else {
+            // who would have thought that currentScreen is set to null to close chat
+            // fuck you, coc client banana reviewers
             bind = module;
         }
 
