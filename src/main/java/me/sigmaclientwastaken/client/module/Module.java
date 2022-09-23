@@ -52,15 +52,20 @@ public class Module {
     }
 
     public void setEnabled(boolean enabled) {
+        // checking if the enabled state actually changes
         if(this.enabled != enabled) {
             this.enabled = enabled;
 
             if(enabled) {
+                // calls onEnable
                 onEnable();
 
+                // if the module is still enabled, register
+                // this prevents the module from registering while off
                 if(this.enabled)
                     Client.getInstance().getEventBus().register(this);
             } else {
+                // unregisters then calls onDisable
                 Client.getInstance().getEventBus().unregister(this);
                 onDisable();
             }
